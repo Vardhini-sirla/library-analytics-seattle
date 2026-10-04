@@ -41,8 +41,8 @@ Both `Data/` folders are gitignored: the files exceed GitHub's 100 MB limit and 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Vardhini-sirla/<repo>.git
-   cd <repo>
+   git clone https://github.com/Vardhini-sirla/library-analytics-seattle.git
+   cd library-analytics-seattle
    ```
 2. Install the dependencies:
    ```
