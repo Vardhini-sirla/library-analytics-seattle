@@ -1,0 +1,17 @@
+# Bulk data — regeneratable via notebook API pull cell
+Data/Raw/*.csv
+Data/Clean/*.csv
+
+# Keep small aggregation outputs (needed for Power BI reproducibility)
+!Output/*.csv
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Scratchpad (Claude Code working files)
+scratchpad/
