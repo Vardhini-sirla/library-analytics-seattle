@@ -8,12 +8,12 @@ Full write-up with context for each: [findings.md](findings.md)
 
 - Physical circulation produced no qualifying titles for four consecutive months, April through July 2020
 - Digital still accounted for 70.2% of checkouts in 2023
-- Audiobooks became the largest format in 2023 at 35.4% of checkouts
+- Audiobooks matched ebooks as the largest format in 2023, within 0.6 percentage points
 - Total checkouts grew every year, from 3.28M in 2020 to 4.96M in 2023
 - Ebook share fell from 49.7% to 34.8% over four years
-- Normalizing titles and creators collapsed 30% of title variants and 25% of creator variants, revealing the true rankings
-- James Patterson and Taylor Jenkins Reid draw the same volume from catalogs 38 times apart
-- Where the Crawdads Sing is the most-borrowed title at 27,896 checkouts
+- Normalizing titles and creators collapsed 42% of title variants and 25% of creator variants, revealing the true rankings
+- James Patterson and Taylor Jenkins Reid draw the same volume from catalogs 34 times apart
+- Where the Crawdads Sing is the most-borrowed title at 27,896 checkouts, a tie in practice with Braiding Sweetgrass
 
 ## Repository Structure
 
@@ -57,7 +57,7 @@ Both `Data/` folders are gitignored: the files exceed GitHub's 100 MB limit and 
 
 ## Methodology Notes
 
-The grain is one row per title, edition, material type, checkout type, year and month, where `checkouts` is a monthly sum — so every figure sums that column rather than counting rows, and duplicate-looking rows are separate editions that are never deduplicated. The extract covers checkout years 2020–2023, material types BOOK, EBOOK and AUDIOBOOK, and only records reaching five checkouts in a month; a zero therefore means no title cleared that floor, not that nothing circulated. Step 4b normalizes titles and creators across the two source catalogs, merging 30% of title variants and 25% of creator variants. Filter rationale and the known cleaning limitations are documented in [findings.md](findings.md).
+The grain is one row per title, edition, material type, checkout type, year and month, where `checkouts` is a monthly sum — so every figure sums that column rather than counting rows, and duplicate-looking rows are separate editions that are never deduplicated. The extract covers checkout years 2020–2023, material types BOOK, EBOOK and AUDIOBOOK, and only records reaching five checkouts in a month; a zero therefore means no title cleared that floor, not that nothing circulated. Step 4b normalizes titles and creators across the two source catalogs, merging 42% of title variants and 25% of creator variants; this includes collapsing the print catalog's spaced subtitle colon (" : ") to the digital form (":"), which had previously kept print and digital editions of the same work apart. Bare titles still split from subtitled ones, so a print record catalogued without the subtitle its digital edition carries is counted separately (Braiding Sweetgrass's 1,496 print checkouts, for one). Filter rationale and the known cleaning limitations are documented in [findings.md](findings.md).
 
 ## Tools
 
